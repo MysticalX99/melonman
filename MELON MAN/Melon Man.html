@@ -1,0 +1,47 @@
+<canvas id = 'gamecanvas' width = '1920' height = '1080'></canvas>
+<script>
+	var canvas = document.getElementById('gamecanvas'), ctx = canvas.getContext('2d')
+	var thneed = {
+		x:0,
+		y:0,
+		width:30,
+		height:60,
+		xSpeed:0,
+		mX: 7,
+		ySpeed:0,
+		gravity:0,
+		mH: 0,
+		ac:0.5,
+		acc:false,
+		lacc:false,
+	}
+	var farmer = {
+		x:0,
+		y:0,
+		width:30,
+		height:60,
+		xSpeed:0,
+		mX: 5,
+		ySpeed:0,
+		gravity:0,
+		mH,
+		ac:0.5,
+		acc:false,
+		lacc:false,
+	}
+	requestAnimationFrame(loop)
+	function loop() {
+		requestAnimationFrame(loop)
+	}
+	document.documentElement.style.margin = '0';
+	document.documentElement.style.padding = '0';
+	canvas.style.height = '100%';
+	canvas.style.width = '100%';
+	document.body.style.margin = '0';
+	document.body.style.margin = '0';
+</script>
+<script src = 'Entity.js'></script>
+<script src = 'Movement.js'></script>
+<script src = 'Events.js'></script>
+<script src = 'Platform.js'></script>
+<script src = 'Player.js'></script>
