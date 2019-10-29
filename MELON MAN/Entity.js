@@ -16,6 +16,13 @@ class Entity {
 		ctx.fillStyle = bgColor;
 		ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 	}
+
+	collidesWith(other) {
+		return this.x + this.width > other.x &&
+               this.x < other.x + other.width &&
+               this.y + this.height > other.y &&
+               this.y < other.y + other.height;
+	}
 }
 
-// background usage: Entity.bg(ctx, color);
+// background usage: Entity.bg(ctx, color)
