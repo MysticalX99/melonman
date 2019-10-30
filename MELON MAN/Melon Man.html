@@ -1,6 +1,7 @@
 <canvas id = 'gamecanvas' width = '1920' height = '1080'></canvas>
 <script>
 	var canvas = document.getElementById('gamecanvas'), ctx = canvas.getContext('2d')
+	// thneed is the default character
 	var thneed = {
 		x:0,
 		y:0,
@@ -15,6 +16,7 @@
 		acc:false,
 		lacc:false,
 	}
+	// farmer may become an unlockable
 	var farmer = {
 		x:0,
 		y:0,
@@ -29,9 +31,14 @@
 		acc:false,
 		lacc:false,
 	}
+	var player = new Entity(0, 0, thneed.width, thneed.height);
 	requestAnimationFrame(loop)
 	function loop() {
+		// draw
 		Entity.bg(ctx, 'lawngreen');
+		player.draw(ctx);
+		
+		// update
 		movement()
 		requestAnimationFrame(loop)
 	}
