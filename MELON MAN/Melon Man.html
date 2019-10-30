@@ -1,7 +1,6 @@
 <canvas id = 'gamecanvas' width = '1920' height = '1080'></canvas>
 
 <script src = 'Entity.js'></script>
-<script src = 'Movement.js'></script>
 <script src = 'Events.js'></script>
 <script src = 'Platform.js'></script>
 <script src = 'Player.js'></script>
@@ -24,7 +23,7 @@
 		acc:false,
 		lacc:false,
 		color: 'black',
-		this.move = function(){
+		move: function(){
 		this.x += this.xSpeed
 		if(this.xSpeed >= this.mX) {
 			this.ac = 0
@@ -41,7 +40,7 @@
 			this.xSpeed -= this.ac
 		}
 	}
-	this.jump = function() {
+	jump: function() {
 		this.y += this.ySpeed
 		this.ySpeed += this.gravity
 		if(this.ySpeed == 0) {
