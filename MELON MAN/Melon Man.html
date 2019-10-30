@@ -1,4 +1,10 @@
 <canvas id = 'gamecanvas' width = '1920' height = '1080'></canvas>
+
+<script src = 'Entity.js'></script>
+<script src = 'Movement.js'></script>
+<script src = 'Events.js'></script>
+<script src = 'Platform.js'></script>
+<script src = 'Player.js'></script>
 <script>
 	var canvas = document.getElementById('gamecanvas'), ctx = canvas.getContext('2d')
 	// thneed is the default character
@@ -42,6 +48,7 @@
 		movement()
 		requestAnimationFrame(loop)
 	}
+	// styling
 	document.documentElement.style.margin = '0';
 	document.documentElement.style.padding = '0';
 	canvas.style.height = '100%';
@@ -49,8 +56,3 @@
 	document.body.style.margin = '0';
 	document.body.style.margin = '0';
 </script>
-<script src = 'Entity.js'></script>
-<script src = 'Movement.js'></script>
-<script src = 'Events.js'></script>
-<script src = 'Platform.js'></script>
-<script src = 'Player.js'></script>
