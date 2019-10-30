@@ -24,6 +24,7 @@
 		acc:false,
 		lacc:false,
 		color: 'black',
+		movement: new movement()
 	}
 	// farmer may become an unlockable
 	var farmer = {
@@ -48,9 +49,8 @@
 		player.draw(ctx);
 		
 		// update
-		movement()
-		thneed.move()
-		thneed.jump()
+		thneed.movement.move()
+		thneed.movement.jump()
 		requestAnimationFrame(loop)
 	}
 	// styling
