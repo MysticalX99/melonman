@@ -8,7 +8,7 @@ class Entity {
 	}
 
 	draw(ctx) {
-		ctx.fillStyle = this.color;
+		ctx.fillStyle = this.colour;
 		ctx.fillRect(this.x, this.y, this.width, this.height);
 	}
 
